@@ -10,10 +10,14 @@ export default defineConfig({
     name: 'tinyland-physics',
     root: __dirname,
     globals: true,
-    environment: 'jsdom',
+    environment: 'node',
+    setupFiles: [resolve(__dirname, './tests/setup-dom.ts')],
     include: ['tests/**/*.test.ts'],
-    pool: 'forks',
-    isolate: true,
+    pool: 'threads',
+    deps: {
+      interopDefault: true,
+    },
+    isolate: false,
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html'],

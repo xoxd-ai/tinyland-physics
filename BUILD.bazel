@@ -30,7 +30,7 @@ npm_package(
         ":tinyland_physics",
     ],
     package = "@tummycrypt/tinyland-physics",
-    version = "0.1.0",
+    version = "0.2.2",
     visibility = ["//visibility:public"],
 )
 
@@ -39,7 +39,6 @@ vitest_bin.vitest_test(
     data = [
         ":node_modules",
         "tsconfig.json",
-        "//packages:tsconfig_base",
         ":node_modules/vitest",
         "vitest.config.ts",
     ] + glob(["src/**/*.ts"]) + glob(["tests/**/*.test.ts", "tests/**/*.ts"]),

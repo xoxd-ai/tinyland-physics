@@ -1,4 +1,4 @@
-import type { Blob, BlobConfig } from './types';
+import type { Blob, BlobConfig } from './types.js';
 
 interface ConvexBlob extends Blob {
   baseX: number;
