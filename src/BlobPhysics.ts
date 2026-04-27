@@ -478,18 +478,15 @@ export class BlobPhysics {
 			
 
 			
-			blob.controlVelocities[i].angularVelocity += (Math.random() - 0.5) * 0.00003; 
-			
-			blob.controlVelocities[i].angularVelocity *= 0.999;
-			
 			if (blob.controlVelocities) {
+				blob.controlVelocities[i].angularVelocity += (Math.random() - 0.5) * 0.00003;
+				blob.controlVelocities[i].angularVelocity *= 0.999;
 				blob.controlVelocities[i].angularVelocity = Math.max(
 					-0.0008,
 					Math.min(0.0008, blob.controlVelocities[i].angularVelocity)
 				);
-			} 
-			
-			point.angle += blob.controlVelocities[i].angularVelocity;
+				point.angle += blob.controlVelocities[i].angularVelocity;
+			}
 		});
 
 		

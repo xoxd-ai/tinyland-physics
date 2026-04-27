@@ -1,6 +1,6 @@
 {
   "name": "@tummycrypt/tinyland-physics",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Physics simulation engines for blob animations, scroll handling, and device motion",
   "type": "module",
   "license": "(Zlib AND LicenseRef-Tinyland-Proprietary)",
@@ -28,11 +28,12 @@
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "pnpm build && pnpm check:package",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check:package": "publint"
   },
   "keywords": [
     "physics",
@@ -45,19 +46,25 @@
   "author": "Tinyland Inc.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tinyland-inc/tinyland.dev",
-    "directory": "packages/tinyland-physics"
+    "url": "git+https://github.com/tinyland-inc/tinyland-physics.git"
   },
   "devDependencies": {
+    "@types/node": "^22.0.0",
+    "happy-dom": "^17.0.0",
     "typescript": "^5.5.0",
-    "vitest": "^3.0.0"
+    "vitest": "^4.0.0",
+    "publint": "^0.3.18"
   },
   "engines": {
     "node": ">=22.0.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
-    "access": "public",
-    "provenance": true
+    "access": "public"
+  },
+  "packageManager": "pnpm@10.13.1",
+  "homepage": "https://github.com/tinyland-inc/tinyland-physics",
+  "bugs": {
+    "url": "https://github.com/tinyland-inc/tinyland-physics/issues"
   }
 }
