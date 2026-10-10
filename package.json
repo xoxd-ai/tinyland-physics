@@ -1,6 +1,7 @@
 {
   "name": "@tummycrypt/tinyland-physics",
   "version": "0.2.2",
+  "private": true,
   "description": "Physics simulation engines for blob animations, scroll handling, and device motion",
   "type": "module",
   "license": "(Zlib AND LicenseRef-Tinyland-Proprietary)",
@@ -28,7 +29,6 @@
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist",
-    "prepublishOnly": "pnpm build && pnpm check:package",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
@@ -46,7 +46,7 @@
   "author": "Tinyland Inc.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tinyland-inc/tinyland-physics.git"
+    "url": "git+https://github.com/xoxd-ai/tinyland-physics.git"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
@@ -58,13 +58,9 @@
   "engines": {
     "node": ">=22.0.0"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
   "packageManager": "pnpm@10.13.1",
-  "homepage": "https://github.com/tinyland-inc/tinyland-physics",
+  "homepage": "https://github.com/xoxd-ai/tinyland-physics",
   "bugs": {
-    "url": "https://github.com/tinyland-inc/tinyland-physics/issues"
+    "url": "https://github.com/xoxd-ai/tinyland-physics/issues"
   }
 }
